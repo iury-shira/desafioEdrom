@@ -21,8 +21,8 @@ public class RotatePanel extends JPanel implements ActionListener {
     public static double velocAngMax = RotateApp.velAngMax;
     public static double vel = 0;
     public static double velAng = 0;
-    public static Controle controleTranslacao = new Controle(0.0200, 0.7500, 0.0050);
-    public static Controle controleRotacao = new Controle(0.0100, 0.8000, 0.0050);
+    public static Controle controleTranslacao = new Controle(0.000010, 0.250000, 0.000002);
+    public static Controle controleRotacao = new Controle(0.000020, 0.800000, 0.000010);
 
     public RotatePanel() {
         
@@ -67,9 +67,11 @@ public class RotatePanel extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
     	
-    	System.out.println(x_f + ", " + y_f + ", " + theta + ", " + thetaFinal);
+    	System.out.println("(" + x_f + ", " + y_f + ")" + ", " + "(" + x_0 + ", " + y_0 + ")");
+    	System.out.println(theta + ", " + thetaFinal);
         System.out.println("velocidade rotacao imposta: " + velAng);
         System.out.println("velocidade translacao imposta: " + vel);
+        System.out.println();
         
 		Rotacao.algoritmoRotacao();
 		Translacao.algoritmoTranslacao();

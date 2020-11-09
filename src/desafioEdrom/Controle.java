@@ -13,13 +13,13 @@ public class Controle {
 		gama = (k_d/25.0);
 	}
 	
-	public double inputLinear(double velMax, double velAtual) {
+	public double inputControle(double velMax, double erroRef) {
 		
-		 E[K] = velMax - velAtual;
+		 E[K] = erroRef;
 		 
 		 // variar parametros do controlador PID trapezoidal
 		 U[K] = U[K-1] + alpha*E[K] + beta*E[K-1] + gama*E[K-2];
-		 System.out.println("U[K] = " + U[K]);
+		 // System.out.println("U[K] = " + U[K]);
 		 
 		 // variar parametros do controlador Z-N		
 		 // U[K] = 1.41*U[K-1] - 0.4096*U[K-2] + 0.0245*E[K] + 0.005237*E[K-1] - 0.01926*E[K-2];

@@ -9,7 +9,7 @@ public class Rotacao {
         	if ((RotatePanel.theta < (RotatePanel.thetaFinal - Math.PI)) && (RotatePanel.theta >= -Math.PI)) {
         		// theta -= dt;
         		RotatePanel.theta -= RotatePanel.velAng*25.0;
-        		RotatePanel.velAng = RotatePanel.controleRotacao.inputLinear(RotatePanel.velocAngMax, RotatePanel.velAng);
+        		RotatePanel.velAng = RotatePanel.controleRotacao.inputControle(RotatePanel.velocAngMax, Math.abs(RotatePanel.theta - RotatePanel.thetaFinal));
         		if (RotatePanel.theta < - Math.PI) {
         			RotatePanel.aux = Math.abs(RotatePanel.theta) - Math.PI;
         			RotatePanel.theta = Math.PI - RotatePanel.aux;
@@ -18,12 +18,12 @@ public class Rotacao {
         		if (RotatePanel.theta < RotatePanel.thetaFinal) {
         			// theta += dt;
         			RotatePanel.theta += RotatePanel.velAng*25.0;
-        			RotatePanel.velAng = RotatePanel.controleRotacao.inputLinear(RotatePanel.velocAngMax, RotatePanel.velAng);
+        			RotatePanel.velAng = RotatePanel.controleRotacao.inputControle(RotatePanel.velocAngMax, Math.abs(RotatePanel.theta - RotatePanel.thetaFinal));
         		}
         		if (RotatePanel.theta > RotatePanel.thetaFinal) {
         			// theta -= dt;
         			RotatePanel.theta -= RotatePanel.velAng*25.0;
-        			RotatePanel.velAng = RotatePanel.controleRotacao.inputLinear(RotatePanel.velocAngMax, RotatePanel.velAng);
+        			RotatePanel.velAng = RotatePanel.controleRotacao.inputControle(RotatePanel.velocAngMax, Math.abs(RotatePanel.theta - RotatePanel.thetaFinal));
         		}
         	}
         }
@@ -34,7 +34,7 @@ public class Rotacao {
         	if ((RotatePanel.theta > (RotatePanel.thetaFinal + Math.PI)) && (RotatePanel.theta <= Math.PI)) {
         		// theta += dt;
         		RotatePanel.theta += RotatePanel.velAng*25.0;
-        		RotatePanel.velAng = RotatePanel.controleRotacao.inputLinear(RotatePanel.velocAngMax, RotatePanel.velAng);
+        		RotatePanel.velAng = RotatePanel.controleRotacao.inputControle(RotatePanel.velocAngMax, Math.abs(RotatePanel.theta - RotatePanel.thetaFinal));
         		if (RotatePanel.theta > Math.PI) {
         			RotatePanel.aux = RotatePanel.theta - Math.PI;
         			RotatePanel.theta = -Math.PI + RotatePanel.aux;
@@ -43,12 +43,12 @@ public class Rotacao {
         		if (RotatePanel.theta > RotatePanel.thetaFinal) {
         			// theta -= dt;
         			RotatePanel.theta -= RotatePanel.velAng*25.0;
-        			RotatePanel.velAng = RotatePanel.controleRotacao.inputLinear(RotatePanel.velocAngMax, RotatePanel.velAng);
+        			RotatePanel.velAng = RotatePanel.controleRotacao.inputControle(RotatePanel.velocAngMax, Math.abs(RotatePanel.theta - RotatePanel.thetaFinal));
         		}
         		if (RotatePanel.theta < RotatePanel.thetaFinal) {
         			// theta += dt;
         			RotatePanel.theta += RotatePanel.velAng*25.0;
-        			RotatePanel.velAng = RotatePanel.controleRotacao.inputLinear(RotatePanel.velocAngMax, RotatePanel.velAng);
+        			RotatePanel.velAng = RotatePanel.controleRotacao.inputControle(RotatePanel.velocAngMax, Math.abs(RotatePanel.theta - RotatePanel.thetaFinal));
         		}
         	}
         }
@@ -60,7 +60,7 @@ public class Rotacao {
         	if ((RotatePanel.theta > (RotatePanel.thetaFinal + Math.PI)) && RotatePanel.theta <= Math.PI) {
         		// theta += dt;
         		RotatePanel.theta += RotatePanel.velAng*25.0;
-        		RotatePanel.velAng = RotatePanel.controleRotacao.inputLinear(RotatePanel.velocAngMax, RotatePanel.velAng);
+        		RotatePanel.velAng = RotatePanel.controleRotacao.inputControle(RotatePanel.velocAngMax, Math.abs(RotatePanel.theta - RotatePanel.thetaFinal));
         		if (RotatePanel.theta > Math.PI) {
         			RotatePanel.aux = RotatePanel.theta - Math.PI;
         			RotatePanel.theta = -Math.PI + RotatePanel.aux;
@@ -69,12 +69,12 @@ public class Rotacao {
         		if (RotatePanel.theta < RotatePanel.thetaFinal) {
         			// theta += dt;
         			RotatePanel.theta += RotatePanel.velAng*25.0;
-        			RotatePanel.velAng = RotatePanel.controleRotacao.inputLinear(RotatePanel.velocAngMax, RotatePanel.velAng);
+        			RotatePanel.velAng = RotatePanel.controleRotacao.inputControle(RotatePanel.velocAngMax, Math.abs(RotatePanel.theta - RotatePanel.thetaFinal));
         		}
         		if (RotatePanel.theta > RotatePanel.thetaFinal) {
         			// theta -= dt;
         			RotatePanel.theta -= RotatePanel.velAng*25.0;
-        			RotatePanel.velAng = RotatePanel.controleRotacao.inputLinear(RotatePanel.velocAngMax, RotatePanel.velAng);
+        			RotatePanel.velAng = RotatePanel.controleRotacao.inputControle(RotatePanel.velocAngMax, Math.abs(RotatePanel.theta - RotatePanel.thetaFinal));
         		}
         	}
         }
@@ -86,7 +86,7 @@ public class Rotacao {
         	if ((RotatePanel.theta < (RotatePanel.thetaFinal - Math.PI)) && RotatePanel.theta >= -Math.PI) {
         		// theta -= dt;
         		RotatePanel.theta -= RotatePanel.velAng*25.0;
-        		RotatePanel.velAng = RotatePanel.controleRotacao.inputLinear(RotatePanel.velocAngMax, RotatePanel.velAng);
+        		RotatePanel.velAng = RotatePanel.controleRotacao.inputControle(RotatePanel.velocAngMax, Math.abs(RotatePanel.theta - RotatePanel.thetaFinal));
         		if (RotatePanel.theta < -Math.PI) {
         			RotatePanel.aux = Math.abs(RotatePanel.theta) - Math.PI;
         			RotatePanel.theta = Math.PI - RotatePanel.aux;
@@ -95,12 +95,12 @@ public class Rotacao {
         		if (RotatePanel.theta < RotatePanel.thetaFinal) {
         			// theta += dt;
         			RotatePanel.theta += RotatePanel.velAng*25.0;
-        			RotatePanel.velAng = RotatePanel.controleRotacao.inputLinear(RotatePanel.velocAngMax, RotatePanel.velAng);
+        			RotatePanel.velAng = RotatePanel.controleRotacao.inputControle(RotatePanel.velocAngMax, Math.abs(RotatePanel.theta - RotatePanel.thetaFinal));
         		}
         		if (RotatePanel.theta > RotatePanel.thetaFinal) {
         			// theta -= dt;
         			RotatePanel.theta -= RotatePanel.velAng*25.0;
-        			RotatePanel.velAng = RotatePanel.controleRotacao.inputLinear(RotatePanel.velocAngMax, RotatePanel.velAng);
+        			RotatePanel.velAng = RotatePanel.controleRotacao.inputControle(RotatePanel.velocAngMax, Math.abs(RotatePanel.theta - RotatePanel.thetaFinal));
         		}
         	}
         }
